@@ -70,31 +70,21 @@
                 <!-- Food Data Table -->
                 <div class="row mt-4">
                     <div class="col-md-12">
-                        <h4>Most Ordered Foods</h4>
+                        <h4>Most Ordered User</h4>
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th>Food Item</th>
-                                    <th>Orders</th>
+                                    <th>Customer Name</th>
+                                    <th>Total Orders</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach($topCustomer as $customer)
                                 <tr>
-                                    <td>Pizza</td>
-                                    <td>150</td>
+                                    <td>{{ $customer->customer_name }}</td>
+                                    <td>{{ $customer->total_orders }}</td>
                                 </tr>
-                                <tr>
-                                    <td>Burger</td>
-                                    <td>120</td>
-                                </tr>
-                                <tr>
-                                    <td>Pasta</td>
-                                    <td>90</td>
-                                </tr>
-                                <tr>
-                                    <td>Salad</td>
-                                    <td>50</td>
-                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
