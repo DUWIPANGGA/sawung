@@ -53,7 +53,7 @@
                                 <td>{{ number_format($product->price, 0, ',', '.') }}</td>
                                 <td>{{ ucfirst($product->category) }}</td> <!-- Menampilkan Kategori Produk -->
                                 <td>
-                                    <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}"
+                                    <img src="{{ asset($product->image) }}" alt="{{ $product->name }}"
                                         width="100px">
                                 </td>
                                 <td>

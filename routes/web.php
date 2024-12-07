@@ -75,7 +75,7 @@ Route::get('/checkout/receipt', [CheckoutController::class, 'receipt'])->name('c
 Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
 Route::get('/orders/{id}', [OrderController::class, 'show'])->name('orders.show');
 Route::put('/orders/{order}/updatePayment', [OrderController::class, 'updatePayment'])->name('orders.updatePayment');
-Route::patch('orders/{id}/payment', [OrderController::class, 'updatePayment']);
+Route::patch('orders/{id}/paymadent', [OrderController::class, 'updatePayment']);
 
 
 
