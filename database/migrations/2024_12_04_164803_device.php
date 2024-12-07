@@ -11,16 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('orders', function (Blueprint $table) {
+        Schema::create('device', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->constrained()->onDelete('cascade');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->integer('quantity');
-            $table->decimal('total_price', 8, 2);
-            $table->string('status')->default('pending');
+            $table->string('id_device');
+            $table->string('password');
+            $table->unsignedBigInteger('id_user');
+            $table->string('nama_device');
+            $table->integer('status')->default(0);
             $table->timestamps();
+            $table->foreign('id')->references('id')->on('users')->onDelete('cascade');
         });
-        
     }
 
     /**
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('orders');
+        Schema::dropIfExists('device');
     }
 };

@@ -13,5 +13,6 @@ class Product extends Model
         'name',
         'price',
         'image',
+        'category', // Tambahkan kolom category
     ];
 }

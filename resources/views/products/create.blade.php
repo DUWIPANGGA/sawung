@@ -1,6 +1,4 @@
-@extends('layouts.app')
 
-@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tambah Produk</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -42,9 +42,20 @@
                 <input type="file" name="image" id="image" class="form-control" required>
             </div>
 
+            <div class="mb-3">
+                <label for="category" class="form-label">Kategori:</label>
+                <select name="category" id="category" class="form-control" required>
+                    <option value="makanan">Makanan</option>
+                    <option value="minuman">Minuman</option>
+                </select>
+            </div>
+
             <button type="submit" class="btn btn-primary">Simpan</button>
+            <!-- Add space between buttons using ml-2 (margin-left) and icon to the cancel button -->
+            <a href="{{ route('products.index') }}" class="btn btn-secondary ms-4">
+                <i class="fas fa-times"></i> Batal
+            </a>
         </form>
     </div>
 </body>
 </html>
-@endsection

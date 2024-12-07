@@ -32,17 +32,14 @@
                     @auth
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('home') }}"><b>Home</b></a>
+                            <a class="nav-link" href="{{ route('pemesan.dashboard') }}"><b>Home</b></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('menu') }}"><b>Menu</b></a>
                         </li> 
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('keranjang') }}"><b>Keranjang</b></a>
-                        </li>  
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('products.index') }}"><b>Produk</b></a>
-                        </li>                         
+                        </li>                        
                     </ul>
                     @endauth
                     <!-- Right Side Of Navbar -->

@@ -13,7 +13,7 @@
         <div class="container">
             <h1>Pemesanan Cepat dengan Barcode di Saung Biung</h1>
             <p>Solusi pemesanan digital untuk pengalaman lebih praktis</p>
-            <a href="/register" class="btn-primary">Daftar Sekarang</a>
+            <a href="/login" class="btn-primary">Daftar Sekarang</a>
         </div>
     </header>
     

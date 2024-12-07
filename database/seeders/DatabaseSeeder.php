@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Database\Seeders\UsersTableSeeder; // Pastikan pemanggilan dengan namespace yang benar
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,7 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        $this->call(UsersTableSeeder::class);  // Pastikan pemanggilan sesuai dengan namespace
 
         User::factory()->create([
             'name' => 'Test User',
