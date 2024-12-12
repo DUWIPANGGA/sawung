@@ -82,14 +82,14 @@ Route::patch('orders/{id}/paymadent', [OrderController::class, 'updatePayment'])
 
 // Route Checkout
 
-Route::middleware('auths')->group(function () {});
+Route::middleware('admin')->group(function () {
 // Route::middleware('admin')->group(function () {
     Route::post('/device', [DeviceController::class, 'store'])->name('device.add');
     Route::delete('/device/{id}', [DeviceController::class, 'destroy'])->name('device.delete');
     Route::put('/device', [DeviceController::class, 'edit'])->name('device.edit');
     Route::get('/device', [DeviceController::class, 'show'])->name('device.show');
 // });
-
+});
 Route::get('/checkout', [CheckoutController::class, 'form'])->name('checkout.form');
 Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.store');
 Route::get('/receipt', [CheckoutController::class, 'receipt'])->name('checkout.receipt');

@@ -144,7 +144,7 @@
                             <div class="card text-white bg-primary mb-3 h-100">
                                 <div class="card-header">Total Device</div>
                                 <div class="card-body d-flex justify-content-center align-items-center">
-                                    <h5 class="card-title" style="font-size: 5rem;">{{ count($devices) }}</h5>
+                                    <h5 class="card-title" style="font-size: 3rem;">{{ count($devices) }}</h5>
                                 </div>
                             </div>
                         </div>
@@ -152,15 +152,15 @@
                             <div class="card text-white bg-success mb-3 h-100">
                                 <div class="card-header">Device Active</div>
                                 <div class="card-body d-flex justify-content-center align-items-center">
-                                    <h5 class="card-title" id="device_active" style="font-size: 5rem;">0</h5>
+                                    <h5 class="card-title" id="device_active" style="font-size: 3rem;">0</h5>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2 h-100">
                             <div class="card text-white bg-warning mb-3 h-100">
-                                <div class="card-header">Time</div>
+                                <div class="card-header" id="time-now">Time</div>
                                 <div class="card-body d-flex justify-content-center align-items-center">
-                                    <h5 class="card-title" style="font-size: 5rem;">{{ count($devices) }}</h5>
+                                    <h5 class="card-title" style="font-size: 3rem;">{{ count($devices) }}</h5>
                                 </div>
                             </div>
                         </div>
@@ -192,7 +192,7 @@
                                 onclick="ringing(this)" data-id-device="{{ $device->id_device }}"
                                 data-password-device="{{ $device->password }}">
                                 <div class=" h-70 card-logo-container">
-                                    <i class="fas fa-volume-xmark" style="font-size: 5rem;"></i>
+                                    <i class="fas fa-volume-xmark" style="font-size: 3rem;"></i>
                                     <!-- Ukuran diperbesar dengan fa-3x -->
                                 </div>
                                 <h3 class="h3 text-center w-100s">{{ $device->nama_device }}</h3>
