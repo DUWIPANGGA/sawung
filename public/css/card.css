@@ -79,11 +79,12 @@ justify-content: space-between;
   flex-direction: row;
   justify-content: space-around;
   /* background-color: #cccccc; */
-  /* background-image: url('../assets/icon/lamp_off.png  '); */
+  background-image: url();
   background-repeat: no-repeat;
   background-position: center;
 }
 .popup-alert {
+  
   position: absolute;
   top: 10%;
   left: 50%;

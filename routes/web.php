@@ -13,7 +13,7 @@ use App\Http\Controllers\OrderController;
 
 // Route untuk halaman awal
 Route::get('/', function () {
-    return view('landing_page');
+    return view('landingpage');
 });
 
 // Route untuk menu

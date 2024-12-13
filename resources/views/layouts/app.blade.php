@@ -20,8 +20,10 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-primary shadow-sm">
+        <nav class="navbar navbar-expand-md shadow-none"
+            style="position: fixed; top: 0; width: 100%; background-color: #fe720094; z-index: 1000;">
             <div class="container">
+                <img src="{{ asset('gambar/logo1.png') }}" alt="" height="70px">
                 <a class="navbar-brand text-white" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
@@ -79,7 +81,7 @@
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
+                             document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -94,7 +96,15 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <style>
+            /* .navbar-transparent {
+        position: sticky;
+        top: 0;
+        background-color: transparent !important;
+    } */
+        </style>
+
+        <main class="">
             @yield('content')
         </main>
     </div>

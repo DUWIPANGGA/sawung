@@ -110,21 +110,18 @@
     </head>
 
     <body>
-        <div class="container w-100">
+        <div class="container w-100 " style="margin-top: 15vh">
             <h2 class="text-center mb-4 fw-bold text-primary">Menu Produk</h2>
-<div class="text-center mb-5">
-    <a href="{{ route('cart.index') }}"
-        class="btn btn-lg px-5 py-3 rounded-pill shadow-lg border-0 transition-all hover:scale-105"
-        style="background: linear-gradient(45deg, #007bff, #0056b3); color: white;">
-        <i class="fas fa-shopping-cart me-2"></i> Lihat Keranjang
-    </a>
-</div>
 
-            <!-- Kategori Navigasi -->
-            <div class="text-center mb-5">
-                <button class="btn btn-outline-primary category-btn mx-2" onclick="showCategory('makanan')">Makanan</button>
-                <button class="btn btn-outline-primary category-btn mx-2" onclick="showCategory('minuman')">Minuman</button>
-            </div>
+
+            <div class="text-center mb-5" style="background-image: url('{{ asset('gambar/page.png') }}');background-size: cover; background-position: center; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+                <a href="{{ route('cart.index') }}">
+                    <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Keranjang Belanja" style="width: 30px; height: 30px;">
+                </a>
+    <h2 class="text-white fw-bold mb-4">Kategori Produk</h2>
+<button class="btn btn-outline-success category-btn mx-2" onclick="showCategory('makanan')">Makanan</button>
+<button class="btn btn-outline-success category-btn mx-2" onclick="showCategory('minuman')">Minuman</button>
+</div>
 
             <!-- Bagian Makanan -->
             <div id="makanan" class="category-section w-100">
